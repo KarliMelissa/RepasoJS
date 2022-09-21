@@ -24,17 +24,40 @@ const CalcularCorazonesRotos =(Veces)=>{
     })
 }    
 /**Donde se pasan corazones si es then pasan las veces que te partieron el corazon */
-CalcularCorazonesRotos(7).then((corazones)=>{
-    let DivisionCorazon = 2;
-    console.log(`El corazon esta dividido en ${corazones/DivisionCorazon}`);
-}).catch((error)=>{
-    let CorazonCompleto = 1;
-    console.log('el corazon esta completo')
-    console.log(error + CorazonCompleto);
-})
+// CalcularCorazonesRotos(7).then((corazones)=>{
+//     let DivisionCorazon = 2;
+//     console.log(`El corazon esta dividido en ${corazones/DivisionCorazon}`);
+// }).catch((error)=>{
+//     let CorazonCompleto = 1;
+//     console.log('el corazon esta completo')
+//     console.log(error + CorazonCompleto);
+// })
+
 
 // cls
 
-// function ElAmorDeElla2() {
-    
-// }
+const CuritasCorazones=()=>{
+    return new Promise((resolve, reject)=>{
+        if (true) {
+            return resolve(10)
+        }
+    })
+}
+
+async function ElAmorDeElla2() {
+
+    try {
+        let PedasosDeCorazon = await CalcularCorazonesRotos(2);
+        let CuritasDeCorazon = await CuritasCorazones();
+        console.log(PedasosDeCorazon + CuritasDeCorazon);
+    } catch (error) {
+        console.log(error)
+    }
+}
+
+function Data() {
+    console.log('Hola');
+}
+Data();
+
+ElAmorDeElla2()
