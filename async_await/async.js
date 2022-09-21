@@ -60,4 +60,29 @@ function Data() {
 }
 Data();
 
-ElAmorDeElla2()
+ElAmorDeElla2();
+
+
+/**Crear dos promesas 
+ * la primera que te devuelva un objeto con los datos de un estudiante si
+ * la suma de las calificaciones es mayor a 7
+ * Crear una promesa que en base al paralelo del estudiante te devuelva de excelencia 
+ * si este pertenece al paralelo A y que tre devuelva normal si su paralelo es diferente
+ * y trabajarlo con async await
+ */
+
+/**Creacion de objeto */
+/**Desestructuracion */
+/**Promesas y async await */
+
+let Estudiante = {
+    nombre:'karla',
+    apellido:'Sanchez',
+    paralelo:'A',
+    calificaciones:[7,9, 10]
+}
+
+
+
+
+
