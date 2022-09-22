@@ -75,12 +75,78 @@ ElAmorDeElla2();
 /**Desestructuracion */
 /**Promesas y async await */
 
+
+
+
+
+/*const SumaCalificaciones=()=>{
+    return new Promise((resolve, reject)=>{
+        let sum = 0;
+           for (let i = 0; i > calificaciones.length; i++) {
+            sum += calificaciones[i];
+           }
+    })
+}*/
+
 let Estudiante = {
     nombre:'karla',
     apellido:'Sanchez',
     paralelo:'A',
-    calificaciones:[7,9, 10]
+    calificaciones:[1,1, 1]
 }
+
+// let {calificaciones} = Estudiante
+
+const datosEstudiante=(Estudiante)=>{
+    //let {nombre, apellido, paralelo, calificaciones}=Estudiante
+    let {calificaciones} = Estudiante
+    return new Promise((resolve, reject)=>{
+        let sum = 0;
+           for (let i = 0; i < calificaciones.length; i++) {
+            sum += calificaciones[i];
+           }
+
+        if( sum > 7){
+            resolve (Estudiante)
+        }else{
+            reject("No hay datos de estudiante")
+        }
+    })
+}
+// datosEstudiante(Estudiante).then(res=>{
+//     console.log(res);
+// }).catch(error=> console.log(error))
+
+const ParaleloEstudiante=(paralelo)=>{
+    return new Promise((resolve, reject)=>{
+        if (paralelo === "A") {
+            resolve("Excelencia")
+        }else{
+            reject ("normal")
+        }
+    })
+}
+
+async function DevolverDatosEstudiante(Estudiante) {
+
+    try {
+        let datos = await datosEstudiante(Estudiante);
+        let{paralelo}=datos
+        console.log(datos);
+        let paralel = await ParaleloEstudiante(paralelo);
+        console.log(paralel);
+        //console.log(nombre, apellido, paralelo, calificaciones);
+    } catch (error) {
+        console.log(error)
+    }
+}
+DevolverDatosEstudiante(Estudiante)
+
+/*Crear una promesa que en base al paralelo del estudiante te devuelva de excelencia 
+ * si este pertenece al paralelo A y que tre devuelva normal si su paralelo es diferente
+ * y trabajarlo con async await*/
+
+
 
 
 
