@@ -141,6 +141,7 @@ async function DevolverDatosEstudiante(Estudiante) {
     }
 }
 DevolverDatosEstudiante(Estudiante)
+console.log('prueba cambio');
 
 /*Crear una promesa que en base al paralelo del estudiante te devuelva de excelencia 
  * si este pertenece al paralelo A y que tre devuelva normal si su paralelo es diferente
