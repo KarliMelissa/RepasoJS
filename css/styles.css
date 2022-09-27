@@ -1,0 +1,26 @@
+.Container{
+    display: flex;
+    justify-content: space-around;
+    background-color: RED;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+.CUADRO{
+    width: 300px;
+    height: 300px;
+    margin: 0 0 30px 0;
+    border: 0.5px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.CUADRO1{
+    background-color: blue;
+    color: antiquewhite;
+}
+ul > li{
+    list-style: none;
+}
+
+/*grip css o muchos la conocen como la grilla de css*/
