@@ -1,13 +1,21 @@
 //https://jsonplaceholder.typicode.com/users
 
 function ShowData(datos) {
-    let Contenido = document.getElementById('root');
-    let {name, username, email} = datos
-    Contenido.innerHTML += `<ul>
-                                    <li>${name}</li>
-                                    <li>${username}</li>
-                                    <li>${email}</li>
-                                </ul>`      
+    //Apunta al contenedor
+    let container =document.querySelector('.container')
+    let {name, username, email, phone, address:{city}} = datos
+    container.innerHTML += 
+    `
+    <div class="card">
+                <div class="name">${name}</div>
+                <div class="username">${username}</div>
+                <div class="email">${email}</div>
+                <div class="phone">${phone}</div>
+                <div class="city">${city}</div>
+            </div>
+        </div>
+    </div>
+    `      
 }
 
 async function GetData() {

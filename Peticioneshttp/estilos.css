@@ -1,0 +1,45 @@
+.container{
+    padding: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+/*linear-gradient es para tener un degradado*/
+.card{
+    padding: 15px 15px 10px;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(to right, #ce8df3 0%, #e463a3 100%);
+    border-radius: 20px;
+    margin-bottom: 16px;
+    margin-right: 16px;
+    flex: auto;
+}
+
+
+.name{
+    font-size: 25px;
+    color: black;
+    display: flex;
+
+}
+
+.username{
+    font-size: 17px;
+    color: rgb(114, 46, 6);
+}
+
+.email{
+    font-size: 13px;
+}
+
+.phone{
+    font-size: 13px;
+}
+
+.city{
+    font-size: 13px;
+}
+
+
