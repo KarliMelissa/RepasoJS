@@ -12,6 +12,7 @@ window.onload =()=>{
     documento.addEventListener('click', ()=>{
         localStorage.setItem('VALORRAMDON', '124345');
         localStorage.setItem('USER', User)
+        console.log(document.getElementById('texto').value);
     });
 
     document.getElementById('Muestrame').addEventListener('click', ()=>{
@@ -35,5 +36,10 @@ window.onload =()=>{
  * y que su sesion este activada
  * 
  * 
+ * PRIMERO 
+ *  CREA LA ESTRUCTURA HTML CON SU ESQUELETO
+ * LOS INPUT VAN A TENER UN GETELEMENTEBYID
+ * button se encarga de las comparaciones es decir los del localstorage
+ * con los que te estan enviando
  * 
  */
