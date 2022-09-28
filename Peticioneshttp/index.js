@@ -2,8 +2,12 @@
 
 function ShowData(datos) {
     //Apunta al contenedor
-    let container =document.querySelector('.container')
-    let {name, username, email, phone, address:{city}} = datos
+    
+    let container =document.querySelector('.container');
+    let {name, username, email, phone, address, company} = datos;
+    let {city} = address;
+    let Namecompany = company.name;
+    
     container.innerHTML += 
     `
     <div class="card">
@@ -12,6 +16,7 @@ function ShowData(datos) {
                 <div class="email">${email}</div>
                 <div class="phone">${phone}</div>
                 <div class="city">${city}</div>
+                <div class="city">${Namecompany}</div>
             </div>
         </div>
     </div>
